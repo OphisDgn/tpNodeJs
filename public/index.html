@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat en temps réel</title>
+</head>
+<body>
+    <div class="chatwith">
+        <!-- Div contenant les messages envoyés -->
+        <div class="chat_content">
+
+        </div>
+        <form action="">
+            <div>
+                <input type="text" name="msg" id="msg" autocomplete="off"/>
+                <button>Envoyer le message</button>
+            </div>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            let socket = io();
+            $('form').submit(function (e) {
+                e.preventDefault();
+                socket.emit("chatMsg", $('#msg').val());
+                $('#msg').val('');
+
+                return false;
+            });
+
+            socket.on('chatMsg', function (msg) {
+                $(".chat_content").append($("<p>").text(msg));
+            })
+        });
+    </script>
+</body>
+</html>
