@@ -7,6 +7,6 @@ Le chat fonctionne en localhost et utiliser deux onglets de navigation pour simu
 lancer plein de requete pour vérifier que le code ne soit pas bloquant (synchrone)
 
 
-Réalisé par LIEUTAUD Céline, B3 Informatique, spécialité développement Web.
+
 
 > Année 2020 - 2021
