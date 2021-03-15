@@ -7,6 +7,7 @@ app.get("/", (req, res) => {
 })
 
 /* FONCTION POUR L'UTLISATION DES COOKIES */
+/*
 function setCookie(cname, cvalue) {
     var d = new Date();
     d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
@@ -38,7 +39,7 @@ function checkCookie(msg) {
       }
     }
 }
-
+*/
 
 io.on('connection', (socket) => {
     console.log('Un utilisateur s\'est connecté !');
@@ -47,8 +48,8 @@ io.on('connection', (socket) => {
         console.log("Un utilisateur s'est déconnecté !");
     });
     socket.on('chatMsg', (msg) => {
-        //io.emit('chatMsg', msg);
-        checkCookie(msg);
+        io.emit('chatMsg', msg);
+        //checkCookie(msg);
     });
 })
 
