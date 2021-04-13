@@ -18,7 +18,7 @@ client.connect((err, instance) => {
 
         const db = instance.db('MongoDb');
         const collection = db.collection('MsgChats');
-        collection.insertOne({Pseudo: 'Steve', Message: 'Hello World'});
+        collection.insertOne({Pseudo: 'Steve', Message: 'Hello World'}); 
 
         /*
         
