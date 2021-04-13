@@ -15,5 +15,9 @@ Bonus: séparer les users et les messages dans deux collections.
 
 /!\ Je n'arrive pas à me connecter avec MongoCompass /!\
 
+Après plusieurs essais, je n'ai toujours pas réussi à me connecter à MongoCompass, avec toujours les mêmes erreurs liées aux "connections string" où il me dit que le mot de passe n'est pas bon. Cependant je fais bien gaffe à ne pas mettre de mot de passe trop difficile, où il n'y a pas de caractère qui peut se révéler embêtant.
+
+Même en ne renseignant que le "localhost:27017", ça n'a pas fonctionné. 
+
 
 > Année 2020 - 2021
